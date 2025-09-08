@@ -43,7 +43,6 @@ fun GreetingScreen() {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // 根据状态切换显示内容
         if (showName) {
             Text(text = "Hello, I am Xian Gong")
         } else {
@@ -52,7 +51,6 @@ fun GreetingScreen() {
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        // 点击按钮时翻转状态
         Button(onClick = { showName = !showName }) {
             if (showName) {
                 Text("SHOW EMAIL")
