@@ -58,9 +58,11 @@ fun KotlinPracticeScreen() {
         Text("counter: $counter")
 
         Row(horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+            // Button 1: increment counter
             Button(onClick = { if (counter < 5) counter++ }) {
                 Text("counter +1")
             }
+            //"cat" -> "dog" -> "fish" -> back to "cat"
             Button(onClick = {
                 input = when (input) {
                     "cat" -> "dog"
@@ -68,6 +70,7 @@ fun KotlinPracticeScreen() {
                     else -> "cat"
                 }
             }) { Text(" $input") }
+            //Button 3: toggle nullableMessage
             Button(onClick = { nullableMessage = if (nullableMessage == null) "Hello again!" else null }) {
                 Text("nullable strings")
             }
